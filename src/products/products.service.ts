@@ -146,7 +146,7 @@ export class ProductsService {
     this.logger.error(error);
     throw new InternalServerErrorException('Ayuda');
   }
-  async deleteAllProucts() {
+  async deleteAllProducts() {
     const query = this.productRepositry.createQueryBuilder('product');
     try {
       return await query.delete().where({}).execute();
